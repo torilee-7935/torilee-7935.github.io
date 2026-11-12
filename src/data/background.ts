@@ -9,8 +9,13 @@ export type Experience = {
 export const EXPERIENCES: Experience[] = [
   {
     title: "Customer Success Associate",
-    company: "ScriptRunner @ The Adaptavist Group",
-    dates: "October 2025 - Present",
+    company: "The Adaptavist Group",
+    dates: "October 2025 – Present",
+    bullets: [
+      "• Guide customers through migrations from on-premise Data Center to Cloud: scoping their setup, finding gaps, and keeping projects moving through blockers and cutover",
+      "• Run enablement sessions for partner companies, teaching their teams to build with our products and AI",
+      "• Designed, built, and launched an AI ticket-triage system using Claude Code, HubSpot, Slack, and ScriptRunner Connect"
+    ]
   },
   {
     title: "Technical Account Manager",
@@ -31,7 +36,8 @@ export const EXPERIENCES: Experience[] = [
       "• Mentored and supported students during cultural immersion in Valencia",
       "• Assisted in coordination of large group trips maintaining clear communication with students and staff",
       "• Streamlined operations by organizing schedules and delivering announcements",
-      "• Primary contact for student concerns while fostering a supportive inclusive environment"
+      "• Primary contact for student concerns while fostering a supportive inclusive environment",
+      "• Coordinated volunteer opportunities for flood relief in Valencia in 2024, where we volunteered at the donation centers"
     ]
   },
   {
@@ -56,6 +62,20 @@ export const EXPERIENCES: Experience[] = [
       "• Delivered high-quality service as a bartender, creating a welcoming and memorable dining experience"
     ]
   }
+];
+
+export type Certification = {
+  name: string;
+  issuer: string;
+  date?: string;
+  link?: string;
+};
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    name: "Claude Certified Architect – Foundations",
+    issuer: "Anthropic",
+  },
 ];
 
 export const EDUCATION = {

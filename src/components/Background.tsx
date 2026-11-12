@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { Award, ExternalLink } from "lucide-react";
 import { theme } from "@/theme";
 import { Container, Section } from "@/shared/ui";
-import { EXPERIENCES, EDUCATION } from "@/data/background";
+import { EXPERIENCES, EDUCATION, CERTIFICATIONS } from "@/data/background";
 
 type ExpCardProps = {
   title: string;
@@ -73,6 +74,46 @@ export function Background() {
             </span>
           )}
         </div>
+
+        {/* Certifications */}
+        {CERTIFICATIONS.length > 0 && (
+          <div
+            className={[
+              theme.radii.md,
+              theme.colors.surface,
+              "border", theme.colors.border,
+              theme.shadow.soft,
+              "p-6 mb-6"
+            ].join(" ")}
+          >
+            <h3 className="text-xl font-semibold text-brand-ink">Certifications</h3>
+            <ul className="mt-3 space-y-3">
+              {CERTIFICATIONS.map((c) => (
+                <li key={c.name} className="flex items-start gap-3">
+                  <span className="shrink-0 mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-sage100 text-brand-sage600">
+                    <Award className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-medium text-brand-ink">{c.name}</p>
+                    <p className="text-sm text-brand-slate">
+                      {c.issuer}{c.date ? ` · ${c.date}` : ""}
+                    </p>
+                    {c.link && (
+                      <a
+                        href={c.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-1 inline-flex items-center gap-1 text-sm text-brand-sage600 hover:text-brand-sage500 underline underline-offset-2"
+                      >
+                        View credential <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Experiences — true masonry */}
         <div className="columns-1 sm:columns-2 gap-5">

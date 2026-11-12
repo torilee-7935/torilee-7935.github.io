@@ -14,7 +14,7 @@ function ProjectCard({
 }: {
   title: string
   description: string
-  link: string
+  link?: string
   stack?: ReadonlyArray<string>
   imageUrl?: string
 }) {
@@ -127,6 +127,7 @@ function ProjectCard({
             {/* With image: description lives in the dropdown */}
             {hasImage && <p className="text-brand-slate">{description}</p>}
 
+            {link && (
             <a
               href={link}
               target="_blank"
@@ -135,6 +136,7 @@ function ProjectCard({
             >
               View Project <ExternalLink className="w-4 h-4" />
             </a>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

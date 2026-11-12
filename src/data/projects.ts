@@ -1,12 +1,18 @@
 export type Project = {
   title: string
   description: string
-  link: string
+  link?: string
   stack?: ReadonlyArray<string>
   imageUrl?: string
 }
 
 export const projectsData = [
+  {
+    title: "AI Ticket-Triage System",
+    stack: ["Claude Code", "AI Agents", "HubSpot", "Slack", "ScriptRunner Connect", "Automation"],
+    description:
+      "An AI-powered triage system for the ScriptRunner customer success queue. It reads incoming HubSpot tickets, works out what kind of request each one is, routes it to the right process and drafts a first response, with updates surfaced in Slack. Designed, built and launched end to end with Claude Code and ScriptRunner Connect, it cuts the time the team spends sorting the queue so they can focus on customers.",
+  },
   {
     title: "Online Portfolio Website",
     stack: ["React", "Typescript", "HTML", "CSS", "Vite", "GitHub Pages"],
