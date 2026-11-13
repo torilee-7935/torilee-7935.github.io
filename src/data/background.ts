@@ -14,7 +14,8 @@ export const EXPERIENCES: Experience[] = [
     bullets: [
       "• Guide customers through migrations from on-premise Data Center to Cloud: scoping their setup, finding gaps, and keeping projects moving through blockers and cutover",
       "• Run enablement sessions for partner companies, teaching their teams to build with our products and AI",
-      "• Designed, built, and launched an AI ticket-triage system using Claude Code, HubSpot, Slack, and ScriptRunner Connect"
+      "• Designed, built, and launched an AI ticket-triage system using Claude Code, HubSpot, Slack, and ScriptRunner Connect that drafts a reply to every incoming support ticket for teammates to review",
+      "• Created the team’s “AI in Customer Success” workshop, and handled high-stakes escalations, including a federal agency’s compliance issue"
     ]
   },
   {
