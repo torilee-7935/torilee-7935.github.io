@@ -31,11 +31,11 @@ export function Contact() {
             className={`mt-6 p-6 ${theme.radii.md} ${theme.colors.surface} border ${theme.colors.border} ${theme.shadow.soft}`}
           >
             {/* FormSubmit options */}
-            <input type="hidden" name="_subject" value="Portfolio Contact — torilee7935.github.io" />
+            <input type="hidden" name="_subject" value="Portfolio Contact — tori-lee.com" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             {/* redirect after submit (optional): update this to your thanks anchor or page */}
-            <input type="hidden" name="_next" value="https://torilee7935.github.io/#contact" />
+            <input type="hidden" name="_next" value="https://tori-lee.com/#contact" />
             {/* spam honeypot */}
             <input type="text" name="_honey" className="hidden" aria-hidden="true" />
 

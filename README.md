@@ -7,8 +7,7 @@ Welcome to my personal portfolio site, where I showcase my work and highlight pr
 - Sticky Navbar with quick access to Home, Background, Projects, and Contact
 - Background section with resume-style snapshot of my experience and education
 - Projects section highlighting technical and creative projects with expandable detail cards
-- Spotify Music Player to add background music while scrolling
-- Tailwind-powered theming with a sage green and sky blue palette, plus lightweight animations
+- Tailwind-powered theming with a sage green and sky blue palette, light and dark mode, and lightweight animations
 
 ## Built With
 - [Vite](https://vitejs.dev/) — build tool
@@ -33,8 +32,8 @@ To run this portfolio locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/torilee7935/torilee7935.github.io.git
-cd torilee7935.github.io
+git clone https://github.com/torilee-7935/torilee-7935.github.io.git
+cd torilee-7935.github.io
 
 # Install dependencies
 npm install

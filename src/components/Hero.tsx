@@ -49,7 +49,7 @@ export function Hero() {
             >
               <a
                 aria-label="GitHub"
-                href="https://github.com/torilee7935"
+                href="https://github.com/torilee-7935"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={[

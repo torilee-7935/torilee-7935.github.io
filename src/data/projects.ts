@@ -17,7 +17,7 @@ export const projectsData = [
     title: "Online Portfolio Website",
     stack: ["React", "Typescript", "HTML", "CSS", "Vite", "GitHub Pages"],
     description: "My own personal portfolio website, showcasing my projects and skills. With a few little easter eggs, let me know if you can find them!",
-    link: "https://github.com/torilee7935/torilee7935.github.io",
+    link: "https://github.com/torilee-7935/torilee-7935.github.io",
     imageUrl: "/images/portfolio.png",
   },
   {
