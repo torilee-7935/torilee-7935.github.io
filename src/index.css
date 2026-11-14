@@ -9,9 +9,60 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Page color scheme hint */
+/* --- Color tokens (R G B) for light and dark mode --- */
 :root {
   color-scheme: light;
+  --brand-white: 255 255 255;
+  --brand-surface: 255 255 255;
+  --brand-sage50: 245 247 245;
+  --brand-sage100: 232 239 234;
+  --brand-sage200: 215 229 220;
+  --brand-sage300: 194 214 201;
+  --brand-sage400: 159 190 167;
+  --brand-sage500: 124 167 135;
+  --brand-sage600: 95 142 109;
+  --brand-sage700: 42 75 54;
+  --brand-sky50: 243 250 255;
+  --brand-sky100: 230 244 254;
+  --brand-sky200: 205 233 253;
+  --brand-sky300: 168 216 251;
+  --brand-sky400: 126 195 247;
+  --brand-sky500: 99 173 223;
+  --brand-ink: 15 23 42;
+  --brand-slate: 51 65 85;
+  --brand-line: 226 232 240;
+  --brand-accent: 95 142 109;
+  --brand-accentHover: 124 167 135;
+}
+
+.dark {
+  color-scheme: dark;
+  --brand-white: 14 21 18;
+  --brand-surface: 22 32 27;
+  --brand-sage50: 29 41 35;
+  --brand-sage100: 35 52 43;
+  --brand-sage200: 44 64 53;
+  --brand-sage300: 60 86 71;
+  --brand-sage400: 95 133 108;
+  --brand-sage500: 165 207 176;
+  --brand-sage600: 143 192 157;
+  --brand-sage700: 79 122 94;
+  --brand-sky50: 15 26 32;
+  --brand-sky100: 19 34 43;
+  --brand-sky200: 27 48 61;
+  --brand-sky300: 76 143 184;
+  --brand-sky400: 99 173 223;
+  --brand-sky500: 76 143 184;
+  --brand-ink: 231 238 234;
+  --brand-slate: 180 194 187;
+  --brand-line: 42 56 50;
+  --brand-accent: 78 127 94;
+  --brand-accentHover: 95 142 109;
+}
+
+/* Smooth color change when switching themes */
+body, header, section, article, footer {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 /* --- Typography presets --- */

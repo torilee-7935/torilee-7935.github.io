@@ -110,9 +110,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             {/* subtle frame (no gradient) */}
-            <div className="w-fit p-[3px] rounded-2xl bg-transparent ring-1 ring-black/5">
+            <div className="w-fit p-[3px] rounded-2xl bg-transparent ring-1 ring-black/5 dark:ring-white/10">
               {/* the only visible border */}
-              <div className="rounded-2xl overflow-hidden bg-white border-[5px] border-brand-sage700 aspect-[4/5] w-[clamp(220px,28vw,360px)]">
+              <div className="rounded-2xl overflow-hidden bg-brand-surface border-[5px] border-brand-sage700 aspect-[4/5] w-[clamp(220px,28vw,360px)]">
                 <img
                   src={PROFILE.photoUrl}
                   alt={PROFILE.name}

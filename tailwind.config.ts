@@ -2,33 +2,36 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
       /* --- Brand palette --- */
       colors: {
+        // Values live in src/index.css as CSS variables, so each one
+        // switches automatically between light and dark mode.
         brand: {
-          white: "#FFFFFF",
-          // Sage
-          sage50:  "#F5F7F5",
-          sage100: "#E8EFEA",
-          sage200: "#D7E5DC",
-          sage300: "#C2D6C9",
-          sage400: "#9FBEA7",
-          sage500: "#7CA787",
-          sage600: "#5F8E6D",
-          sage700: "#2a4b36ff",
-          // Sky
-          sky50:  "#F3FAFF",
-          sky100: "#E6F4FE",
-          sky200: "#CDE9FD",
-          sky300: "#A8D8FB",
-          sky400: "#7EC3F7",
-          sky500: "#63ADDF",
-          // Neutrals
-          ink:   "#0F172A",
-          slate: "#334155",
-          line:  "#E2E8F0",
+          white: "rgb(var(--brand-white) / <alpha-value>)",
+          surface: "rgb(var(--brand-surface) / <alpha-value>)",
+          sage50: "rgb(var(--brand-sage50) / <alpha-value>)",
+          sage100: "rgb(var(--brand-sage100) / <alpha-value>)",
+          sage200: "rgb(var(--brand-sage200) / <alpha-value>)",
+          sage300: "rgb(var(--brand-sage300) / <alpha-value>)",
+          sage400: "rgb(var(--brand-sage400) / <alpha-value>)",
+          sage500: "rgb(var(--brand-sage500) / <alpha-value>)",
+          sage600: "rgb(var(--brand-sage600) / <alpha-value>)",
+          sage700: "rgb(var(--brand-sage700) / <alpha-value>)",
+          sky50: "rgb(var(--brand-sky50) / <alpha-value>)",
+          sky100: "rgb(var(--brand-sky100) / <alpha-value>)",
+          sky200: "rgb(var(--brand-sky200) / <alpha-value>)",
+          sky300: "rgb(var(--brand-sky300) / <alpha-value>)",
+          sky400: "rgb(var(--brand-sky400) / <alpha-value>)",
+          sky500: "rgb(var(--brand-sky500) / <alpha-value>)",
+          ink: "rgb(var(--brand-ink) / <alpha-value>)",
+          slate: "rgb(var(--brand-slate) / <alpha-value>)",
+          line: "rgb(var(--brand-line) / <alpha-value>)",
+          accent: "rgb(var(--brand-accent) / <alpha-value>)",
+          accentHover: "rgb(var(--brand-accentHover) / <alpha-value>)",
         },
 
         /* --- Remap low-contrast slates to light-theme safe values --- */

@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 import { PROFILE } from "@/data/profile"
 import { theme } from "@/theme"
 import { motion, AnimatePresence } from "framer-motion"
+import { ThemeToggle } from "@/components/ThemeToggle"
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
@@ -26,7 +27,7 @@ export function Navbar() {
             theme.shadow.soft, theme.shadow.hover,
             // frosted glass:
             "backdrop-blur",
-            "bg-white/70 supports-[backdrop-filter]:bg-white/60",
+            "bg-brand-surface/70 supports-[backdrop-filter]:bg-brand-surface/60",
           ].join(" ")}
         >
           {/* Top row */}
@@ -44,7 +45,9 @@ export function Navbar() {
               </span> */}
             </a>
 
-            {/* Mobile menu toggle */}
+            {/* Right side: light/dark toggle + mobile menu toggle */}
+            <div className="flex items-center gap-2 md:order-last">
+            <ThemeToggle />
             <button
               className="md:hidden p-2 rounded-md hover:bg-brand-sage50 transition"
               onClick={() => setOpen(!open)}
@@ -57,6 +60,7 @@ export function Navbar() {
                 <ChevronDown className="w-5 h-5 text-brand-sage600" />
               )}
             </button>
+            </div>
 
             {/* Desktop nav */}
             <nav className="hidden md:flex flex-1 justify-center gap-6">

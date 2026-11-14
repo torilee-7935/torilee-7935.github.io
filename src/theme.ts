@@ -3,10 +3,10 @@ export const theme = {
   colors: {
     // Use with Tailwind gradient utilities:
     // <div className={`bg-gradient-to-b ${theme.colors.bg}`}/>
-    bg: "from-white to-brand-sage50",
+    bg: "from-brand-white to-brand-sage50",
 
     // Plain surfaces/cards
-    surface: "bg-white",
+    surface: "bg-brand-surface",
 
     // Text utilities as classes (preferred over inline style)
     text: {
@@ -25,14 +25,14 @@ export const theme = {
     border: "border-brand-line",
 
     // Buttons
-    primary: "bg-brand-sage500 hover:bg-brand-sage600 text-white",
+    primary: "bg-brand-accent hover:bg-brand-accentHover text-white",
     secondary: "bg-brand-sky500 hover:bg-brand-sky400 text-white",
 
     // Badges/pills
     pill: "bg-brand-sage100 text-brand-sage600",
 
     // Light section background
-    softGrad: "bg-gradient-to-br from-brand-sky50 via-white to-brand-sage50",
+    softGrad: "bg-gradient-to-br from-brand-sky50 via-brand-white to-brand-sage50",
   },
 
   // Radii used across components

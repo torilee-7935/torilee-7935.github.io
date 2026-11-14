@@ -98,7 +98,7 @@ function ProjectCard({
       {/* Image band */}
       {hasImage && (
         <div className="px-6 transition-colors group-hover:bg-brand-sage50">
-          <div className={`aspect-[16/9] ${theme.radii.xl} overflow-hidden bg-slate-100 border ${theme.colors.border}`}>
+          <div className={`aspect-[16/9] ${theme.radii.xl} overflow-hidden bg-brand-sage50 border ${theme.colors.border}`}>
             <img
               src={imageUrl}
               alt={`${title} screenshot`}
