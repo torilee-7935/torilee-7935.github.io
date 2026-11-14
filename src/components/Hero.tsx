@@ -82,8 +82,8 @@ export function Hero() {
               {/* CV download circle */}
               <a
                 aria-label="Download CV (PDF)"
-                href="/images/ToriLeeResume.pdf"
-                download="ToriLeeCV.pdf"
+                href="/images/Tori-Lee-Resume.pdf"
+                download="Tori-Lee-Resume.pdf"
                 title="Download CV"
                 className={[
                   "inline-flex h-9 w-9 items-center justify-center",

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
 import { projectsData } from "@/data/projects"
 import { theme } from "@/theme"
+import { TriageDiagram } from "@/components/TriageDiagram"
 import { Container, Section } from "@/shared/ui"
 
 function ProjectCard({
@@ -11,16 +12,20 @@ function ProjectCard({
   link,
   stack,
   imageUrl,
+  diagram,
 }: {
   title: string
   description: string
   link?: string
   stack?: ReadonlyArray<string>
   imageUrl?: string
+  diagram?: "triage"
 }) {
   const [open, setOpen] = useState(false)
   const panelId = `proj-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`
   const hasImage = Boolean(imageUrl)
+  // Only cards with something to reveal (an image card's text or a link) expand.
+  const expandable = hasImage || Boolean(link)
 
   return (
     <motion.div
@@ -37,10 +42,11 @@ function ProjectCard({
     >
       {/* Header (click to toggle) */}
       <button
-        onClick={() => setOpen(o => !o)}
-        aria-expanded={open}
-        aria-controls={panelId}
-        className={`w-full text-left transition-colors group-hover:bg-brand-sage50 ${
+        onClick={() => expandable && setOpen(o => !o)}
+        aria-expanded={expandable ? open : undefined}
+        aria-controls={expandable ? panelId : undefined}
+        disabled={!expandable}
+        className={`w-full text-left transition-colors ${expandable ? "group-hover:bg-brand-sage50" : "cursor-default"} ${
           hasImage ? "px-6 pt-6 pb-3" : "p-6"
         }`}
       >
@@ -73,11 +79,20 @@ function ProjectCard({
             )}
           </div>
 
-          <div className="shrink-0 text-brand-sage600">
-            {open ? <ChevronUp /> : <ChevronDown />}
-          </div>
+          {expandable && (
+            <div className="shrink-0 text-brand-sage600">
+              {open ? <ChevronUp /> : <ChevronDown />}
+            </div>
+          )}
         </div>
       </button>
+
+      {/* Animated diagram (always visible) */}
+      {diagram === "triage" && (
+        <div className="px-6 pb-6 -mt-2">
+          <TriageDiagram />
+        </div>
+      )}
 
       {/* Tags band for image cards (always visible, sits under header) */}
       {hasImage && stack?.length ? (

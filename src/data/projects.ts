@@ -4,12 +4,14 @@ export type Project = {
   link?: string
   stack?: ReadonlyArray<string>
   imageUrl?: string
+  diagram?: "triage"
 }
 
 export const projectsData = [
   {
     title: "AI Ticket-Triage System",
     stack: ["Claude Code", "AI Agents", "HubSpot", "Slack", "ScriptRunner Connect", "Automation"],
+    diagram: "triage",
     description:
       "Drafts a reply to every incoming support ticket for teammates to review in Slack. Before building, I tested the design on 1,715 past tickets: simple rules routed 49% with 97% agreement, so AI handles only the 22% that need judgment, at about $0.45 per run. It runs on 13 reusable Claude skills that apply team policy, with safeguards that keep people in control: read-only live data, a test environment, and a feedback loop that turns teammates’ corrections into better drafts.",
   },
