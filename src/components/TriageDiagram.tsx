@@ -104,7 +104,7 @@ export function TriageDiagram() {
   return (
     <figure className="mt-4">
       <style>{`@media (prefers-reduced-motion: reduce){.triage-dot{display:none}}`}</style>
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto" role="img" aria-labelledby="triage-title triage-desc">
+      <svg viewBox={`0 0 ${W} ${H}`} className="block w-full max-w-[300px] mx-auto h-auto" role="img" aria-labelledby="triage-title triage-desc">
         <title id="triage-title">How the AI ticket-triage system works</title>
         <desc id="triage-desc">
           A new ticket arrives from HubSpot and routing logic decides how to handle it: simple rules route 49% of
@@ -156,13 +156,6 @@ export function TriageDiagram() {
         <Dot path={P.iterateBack} dur={1.2} begin={0.6} />
         <Dot path={P.iterateToDone} dur={1.6} begin={1.8} />
       </svg>
-      <figcaption className="mt-2 flex flex-wrap justify-center gap-2 text-xs">
-        {["13 Claude skills apply team policy", "Read-only live data", "Test environment"].map((t) => (
-          <span key={t} className="px-2.5 py-1 rounded-full bg-brand-sage100 text-brand-sage600">
-            {t}
-          </span>
-        ))}
-      </figcaption>
     </figure>
   )
 }
