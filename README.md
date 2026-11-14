@@ -7,6 +7,7 @@ Welcome to my personal portfolio site, where I showcase my work and highlight pr
 - Sticky Navbar with quick access to Home, Background, Projects, and Contact
 - Background section with resume-style snapshot of my experience and education
 - Projects section highlighting technical and creative projects with expandable detail cards
+- Optional Spotify music player to listen to while scrolling
 - Tailwind-powered theming with a sage green and sky blue palette, light and dark mode, and lightweight animations
 
 ## Built With
