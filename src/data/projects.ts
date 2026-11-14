@@ -13,7 +13,7 @@ export const projectsData = [
     stack: ["Claude Code", "AI Agents", "HubSpot", "Slack", "ScriptRunner Connect", "Automation"],
     diagram: "triage",
     description:
-      "Drafts a reply to every incoming support ticket for teammates to review in Slack. Before building, I tested the design on 1,715 past tickets: simple rules routed 49% with 97% agreement, so AI handles only the 22% that need judgment, at about $0.45 per run. It runs on 13 reusable Claude skills that apply team policy, with safeguards that keep people in control: read-only live data, a test environment, and a feedback loop that turns teammates’ corrections into better drafts.",
+      "Routes every incoming HubSpot support ticket automatically. When the logic allows, the AI posts to the ticket on its own; when a case needs a person, it goes to Slack, where a teammate and the AI iterate on the reply together. Before building, I tested the design on 1,715 past tickets: simple rules routed 49% with 97% agreement, so AI handles only the 22% that need judgment, at about $0.45 per run. It runs on 13 reusable Claude skills that apply team policy, with safeguards that keep people in control: read-only live data, a test environment, and a feedback loop that turns teammates’ corrections into better drafts.",
   },
   {
     title: "Online Portfolio Website",
